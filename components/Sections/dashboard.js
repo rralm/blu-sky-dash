@@ -55,7 +55,7 @@ function Dashboard({ userImage }) {
         </div>
       </nav>
       <div className="grid grid-cols-2 xl:grid-cols-4 gap-x-6 xl:gap-x-9 gap-y-6 xl:gap-y-0 mt-6 xl:mt-10">
-        {cardsData.map((data, key) => (
+        {/* {cardsData.map((data, key) => (
           <div key={key}>
             <Card
               icon={`../${data.valueFor}.svg`}
@@ -64,7 +64,32 @@ function Dashboard({ userImage }) {
               className={`bg-shade${key}`}
             />
           </div>
-        ))}
+        ))} */}
+
+        <Card
+          icon={"../Revenues.svg"}
+          valueFor={"Revenues"}
+          value={"$2,143,243"}
+          className="bg-shadeOne"
+        />
+        <Card
+          icon={"../Transactions.svg"}
+          valueFor={"Transactions"}
+          value={"1,520"}
+          className="bg-shadeTwo"
+        />
+        <Card
+          icon={"../Likes.svg"}
+          valueFor={"Likes"}
+          value={"9,721"}
+          className="bg-shadeThree"
+        />
+        <Card
+          icon={"../Users.svg"}
+          valueFor={"Users"}
+          value={892}
+          className="bg-shadeFour"
+        />
       </div>
       {/* CHART COMPONENT */}
       <div

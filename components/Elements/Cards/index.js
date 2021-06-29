@@ -1,4 +1,6 @@
 const Card = ({ icon, valueFor, value, className }) => {
+
+    console.log(className)
     return (
         <div className={`rounded-medium w-full ${className} py-5 px-6 flex flex-col`}>
             <img src={icon} alt="icon" className="self-start mb-4 md:mb-0 md:self-end" />
