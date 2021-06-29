@@ -7,8 +7,7 @@ import LoginButton from "../components/Elements/Buttons/login";
 import UserLayout from "../components/Layout/userlayout";
 import AllUsers from "../components/Sections/allusers";
 import { useRouter } from "next/router"
-import Lottie from 'react-lottie-player';
-import Animation from '../components/Lottie/loading.json';
+import Animation from "../components/Elements/Blocks/animation";
 
 export default function Component() {
   const [session, loading] = useSession();
@@ -23,14 +22,7 @@ export default function Component() {
   };
 
   if (duration) return (
-    <div className="h-screen w-full flex items-center justify-center bg-transparent">
-      <Lottie
-          loop
-          animationData={Animation}
-          play
-          style={{ width: 300, height: 300 }}
-        />
-    </div>
+    <Animation />
   )
 
   if (session) {
