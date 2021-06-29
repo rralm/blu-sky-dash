@@ -31,9 +31,7 @@ export default function Component() {
 
   if (session) {
     return (
-      <UserLayout  page={router.pathname}>
-        {/* Signed in as {session.user.email} <br />
-        <button onClick={() => signOut()}>Sign out</button> */}
+      <UserLayout  page={router.pathname} handleSignOut={handleSignOut}>
         <Settings userImage={session.user.image} handleSignOut={handleSignOut} />
       </UserLayout>
     );

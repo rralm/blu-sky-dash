@@ -1,4 +1,4 @@
-import { useSession, signIn } from "next-auth/client";
+import { useSession, signIn, signOut } from "next-auth/client";
 import { useState } from "react";
 import Landing from "../components/Layout/landing";
 import SignIn from "../components/Elements/Blocks/signin";
@@ -21,15 +21,17 @@ export default function Component() {
     signIn();
   };
 
+  const handleSignOut = () => {
+    signOut();
+  };
+
   if (duration) return (
     <Animation />
   )
 
   if (session) {
     return (
-      <UserLayout page={router.pathname}>
-        {/* Signed in as {session.user.email} <br />
-        <button onClick={() => signOut()}>Sign out</button> */}
+      <UserLayout page={router.pathname} handleSignOut={handleSignOut}>
         <Dashboard userImage={session.user.image} />
       </UserLayout >
     );
@@ -78,8 +80,6 @@ export default function Component() {
           )}
         </div>
       </section>
-      {/* <p className="font-montserrat text-4xl font-bold">Sign In</p>*/}
-      {/* <button onClick={() => signIn()}>Sign in</button> */}
     </Landing>
   );
 }

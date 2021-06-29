@@ -1,4 +1,4 @@
-const Sidebar = ( {page} ) => {
+const Sidebar = ( {page, handleSignOut} ) => {
     return(
         <div className="w-full lg:w-1/5 bg-primary rounded-none lg:rounded-large p-8 lg:py-16 lg:px-12 flex flex-col justify-between sidebar">
         <div>
@@ -64,7 +64,8 @@ const Sidebar = ( {page} ) => {
         </div>
         <div className="font-montserrat text-sm text-white hidden lg:block">
           <p className="mb-5 cursor-pointer hover:underline">Help</p>
-          <p className="cursor-pointer hover:underline">Contact us</p>
+          <p className=" mb-5 cursor-pointer hover:underline">Contact us</p>
+          <button className="cursor-pointer hover:underline" onClick={handleSignOut}>Sign out</button>
         </div>
       </div>
     )
