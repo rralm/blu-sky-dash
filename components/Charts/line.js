@@ -87,7 +87,10 @@ function LineChart() {
       <div className="hidden lg:block">
         <Line data={data} options={options} height={65} />
       </div>
-      <div className="block lg:hidden">
+      <div className="hidden md:block lg:hidden">
+        <Line data={data} options={options} height={100} />
+      </div>
+      <div className="block md:hidden">
         <Line data={data} options={options} height={200} />
       </div>
     </>

@@ -61,7 +61,7 @@ function Dashboard({ userImage }) {
               icon={`../${data.valueFor}.svg`}
               valueFor={data.valueFor}
               value={data.value}
-              className={`bg-${data.valueFor}`}
+              className={`bg-shade${key}`}
             />
           </div>
         ))}
